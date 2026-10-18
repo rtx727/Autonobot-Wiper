@@ -1,5 +1,5 @@
-# Autonobot-Wiper
-This is the Research and Development Sector for the Autonomous Robot Wiper's Firmware
+# Project-Sweepbot
+This is the Research and Development Sector for the Autonomous Robot Wiper's Firmware.
 The minimum viable product should contain a functional wiper which:
 - Perform the task unassisted on a standardized rectangular table with uniform surface colour.
 - Navigates to travel in a pattern that wipes the surface entirely.

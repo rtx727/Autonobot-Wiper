@@ -7,3 +7,9 @@ The minimum viable product should contain a functional wiper which:
 - Cleaning methods include at least a debris collector, and a form of chemical disinfection.
 - Avoids obstacles on the table, the robot will stop and inform the user to remove the obstruction.
 - Can be easily maintained after usage.
+
+Project Management:
+- Log all updates to the robot development through git, including CAD and programs
+- Some ideas for navigation, if auto detection fails, use button to determine the geometry of the applied table
+
+Task Assignments:

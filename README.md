@@ -9,8 +9,9 @@ The minimum viable product should contain a functional wiper which:
 - Can be easily maintained after usage.
 
 Project Management:
-- Log all updates to the robot development through git, including CAD and programs
+- Log all updates to the robot development through git, including CAD and programs (Take Photos of Prototypes if relevant)
 - Some ideas for navigation, if auto detection fails, use button to determine the geometry of the applied table
+- Formal presentation information curation process could begin simultaneously during development
 
 Robot Building Task Assignments:
 - Matt: Frame, wiper

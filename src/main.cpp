@@ -23,8 +23,9 @@ motor_group motors(RM, LM);
 controller CONTROLLER;
 inertial BrainInertial = inertial();
 
-
 //Structs
+
+//Struct to hold PID controller values and perform calculations
 struct PIDcontroller{
     float Kp;
     float Ki;
@@ -36,13 +37,17 @@ struct PIDcontroller{
 
     //Constructor - sets up K values
     PIDcontroller(float Kp, float Ki, float Kd){
-        Kp = Kp;
-        Ki = Kp;
-        Kd = Kd;
+        this->Kp = Kp;
+        this->Ki = Ki;
+        this->Kd = Kd;
         error = 0;
         previousError = 0;
         integral = 0; //Tracks accumulated error if not responsive enough
         output = 0;
+    }
+
+    ~PIDcontroller(){
+        //Destructor
     }
 
     //PID calculation function
@@ -72,16 +77,26 @@ struct PIDcontroller{
         if (this->output > 100){
             this->output = 100;
         }
-
+        
         return this->output; //outputs motor speed
     }
-
 };
 
-
-
-
-
+//Struct to track robot position and heading
+struct pose{
+    float x;
+    float y;
+    float heading;
+    
+    pose(){
+        x = 0;
+        y = 0;
+        heading = 0;
+    }
+    ~pose(){
+        //Destructor
+    }
+};
 
 //Function decalarations
 
@@ -93,8 +108,7 @@ void calibrateSensors();
 //Params: Velocity, heading
 //Purpose: Drives forward using gyro sensor 
 //Outputs: None
-//Maybe use PID controller to subtract output from one wheel and add to another?
-void driveHeading(float velocity, float heading);
+void driveHeading(float velocity, float targetHeading);
 
 //Params: Heading (+ or -)
 //Purpose: Turns gyro sensor, assumes current heading is zero
@@ -115,21 +129,26 @@ void testPIDTurning(){
 
 
 
-
+// -------------------------------------- MAIN ---------------------------------------------------
 
 int main() {
+    //Calibration
 	calibrateSensors();
     Brain.Screen.printAt( 2, 30, "Hello IQ2" );
+
     //Tests
     testPIDTurning();
 
    
+
+
+    //End program
     Brain.programStop();
 }
 
 //Function definitions
 
-//Yunhao
+//Yunhao -----------------------------------------------------------------------------------------
 void calibrateSensors(){
     Brain.Screen.printAt( 2, 50, "Calibrating Sensors" );
     BrainInertial.calibrate();
@@ -140,6 +159,9 @@ void calibrateSensors(){
 }
 
 void turnHeading(float targetHeading){
+    //Stop all motors
+    motors.stop(brake);
+
     //Set current heading to 0;
     BrainInertial.resetRotation();
     float error = targetHeading; //Initial error is just heading
@@ -161,12 +183,12 @@ void turnHeading(float targetHeading){
 
         //Determine which direction to turn
         if (error > 0){ //right turn
-            motorSpeed = turnPID.calculatePID(error); //Pass in error to PIDcontroller to get output
+            motorSpeed = turnPID.calculatePID(error); //Pass in error to PIDcontroller for output
             RM.spin(reverse, motorSpeed, percent);
             LM.spin(forward, motorSpeed, percent);
         }
         else{ //left turn
-            motorSpeed = turnPID.calculatePID(error); //Pass in error to PIDcontroller to get output
+            motorSpeed = turnPID.calculatePID(error); //Pass in error to PIDcontroller for output
             RM.spin(forward, motorSpeed, percent);
             LM.spin(reverse, motorSpeed, percent);
         }
@@ -177,13 +199,16 @@ void turnHeading(float targetHeading){
 
 
 
-//Riley
-void driveHeading(float velocity, float heading){}
+//Riley ------------------------------------------------------------------------------------------
+void driveHeading(float velocity, float targetHeading){
+    //Maybe use PID controller to subtract output from one wheel and add to another?
+
+}
 
 
 
-//Richard
+//Richard ----------------------------------------------------------------------------------------
 
 
 
-//Matt
+//Matt -------------------------------------------------------------------------------------------

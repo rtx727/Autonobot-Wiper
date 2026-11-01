@@ -13,6 +13,12 @@ Project Management:
 - Some ideas for navigation, if auto detection fails, use button to determine the geometry of the applied table
 - Formal presentation information curation process could begin simultaneously during development
 
+MVP:
+- Automatically clean standard rectangle table without assistance
+- Debris collector that collects debris on the table surface
+- Chemical disinfection along its cleaning path
+- Manual Control
+  
 Robot Building Task Assignments:
 - Matt: Frame, wiper
 - Riley: Spinning rotor
@@ -21,7 +27,6 @@ Robot Building Task Assignments:
 
 Program Task Assignments:
 - Matt: Edge detection
-- Riley: Trivial Functions (Driveforward, Backward, turnleft, turnright, calculating area of
+- Riley: Trivial Functions (Driveforward, Backward, turnleft, turnright, PID for movement program)
 - Richard: Manual Controller program
-- Yunhao: PID for movement program
-  
+- Yunhao: 

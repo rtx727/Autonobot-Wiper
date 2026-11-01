@@ -15,9 +15,35 @@ using namespace std;
 vex::brain       Brain;
 
 // define your global instances of motors and other devices here
+motor rightMotor(PORT1);
+motor leftMotor(PORT6);
+/*
+distance distanceSens(PORT4);
+
+
+*/
 
 
 //Function decalarations
+
+//Params: Velocity, heading
+//Purpose: Drives forward using gyro sensor
+//Outputs: None
+void driveHeading(float velocity, float heading);
+
+//Params: Velocity, heading
+//Purpose: Turns gyro sensor
+//Outputs: None
+void turnHeading(float velocity, float heading);
+
+
+
+
+
+
+
+
+
 
 
 int main() {
@@ -34,12 +60,13 @@ int main() {
 //Function definitions
 
 //Yunhao
-
-
+void turnHeading(float velocity, float heading){ //Add PID
+float error{};
+}
 
 
 //Riley
-
+void driveHeading(float velocity, float heading){}
 
 
 

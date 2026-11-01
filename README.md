@@ -13,3 +13,14 @@ Project Management:
 - Some ideas for navigation, if auto detection fails, use button to determine the geometry of the applied table
 
 Task Assignments:
+Robot:
+  Matt: Frame, wiper
+  Riley: Spinning rotor
+  Richard: Frame, garbage collector
+  Yunhao: 3D printing parts TBD
+Program:
+  Matt: Edge detection
+  Riley: Trivial Functions (Driveforward, Backward, turnleft, turnright, calculating area of 
+  Richard: Manual Controller program
+  Yunhao: 
+  

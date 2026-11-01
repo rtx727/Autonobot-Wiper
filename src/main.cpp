@@ -9,11 +9,15 @@
 #include "vex.h"
 
 using namespace vex;
+using namespace std;
 
 // A global instance of vex::brain used for printing to the IQ2 brain screen
 vex::brain       Brain;
 
 // define your global instances of motors and other devices here
+
+
+//Function decalarations
 
 
 int main() {
@@ -26,3 +30,21 @@ int main() {
         this_thread::sleep_for(10);
     }
 }
+
+//Function definitions
+
+//Yunhao
+
+
+
+
+//Riley
+
+
+
+
+//Richard
+
+
+
+//Matt

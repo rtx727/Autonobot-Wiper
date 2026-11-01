@@ -15,13 +15,13 @@ using namespace std;
 vex::brain       Brain;
 
 // define your global instances of motors and other devices here
-motor rightMotor(PORT1);
-motor leftMotor(PORT6);
-/*
-distance distanceSens(PORT4);
+motor RM(PORT12, bool(reverse));
+motor LM(PORT7, bool(forward));
+bumper BUMPER(PORT3);
+distance DISTANCE(PORT1);
+motor_group motors(RM, LM);
+controller CONTROLLER;
 
-
-*/
 
 
 //Function decalarations

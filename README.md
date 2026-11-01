@@ -14,13 +14,13 @@ Project Management:
 
 Task Assignments:
 Robot:
-  Matt: Frame, wiper
-  Riley: Spinning rotor
-  Richard: Frame, garbage collector
-  Yunhao: 3D printing parts TBD
+- Matt: Frame, wiper
+- Riley: Spinning rotor
+- Richard: Frame, garbage collector
+- Yunhao: 3D printing parts TBD
 Program:
-  Matt: Edge detection
-  Riley: Trivial Functions (Driveforward, Backward, turnleft, turnright, calculating area of 
-  Richard: Manual Controller program
-  Yunhao: 
+- Matt: Edge detection
+- Riley: Trivial Functions (Driveforward, Backward, turnleft, turnright, calculating area of
+- Richard: Manual Controller program
+- Yunhao: PID for movement program
   

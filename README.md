@@ -12,13 +12,13 @@ Project Management:
 - Log all updates to the robot development through git, including CAD and programs
 - Some ideas for navigation, if auto detection fails, use button to determine the geometry of the applied table
 
-Task Assignments:
-- Robot:
+Robot Building Task Assignments:
 - Matt: Frame, wiper
 - Riley: Spinning rotor
 - Richard: Frame, garbage collector
 - Yunhao: 3D printing parts TBD
-- Program:
+
+Program Task Assignments:
 - Matt: Edge detection
 - Riley: Trivial Functions (Driveforward, Backward, turnleft, turnright, calculating area of
 - Richard: Manual Controller program

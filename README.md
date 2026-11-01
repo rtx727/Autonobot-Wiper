@@ -29,4 +29,4 @@ Program Task Assignments:
 - Matt: Edge detection
 - Riley: Trivial Functions (Driveforward, Backward, turnleft, turnright, PID for movement program)
 - Richard: Manual Controller program
-- Yunhao: 
+- Yunhao: PID controller
